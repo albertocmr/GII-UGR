@@ -15,5 +15,4 @@ En esta asignatura, se realizan diferentes prácticas relacionadas con el temari
 
 ## Propietarios
 El profesor que imparte la parte práctica de la asignatura es: Ignacio Javier Pérez Gálvez.
-
 Los códigos que se exigen en las prácticas han sido realizados por el grupo de prácticas.
