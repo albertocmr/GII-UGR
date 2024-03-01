@@ -1,4 +1,4 @@
-# Asignatura Algorítmica, cursada en el curso 2023/24.
+# Algorítmica, cursada en el curso 2023/24.
 
 En la asignatura, se realizan diferentes prácticas relacionadas con el temario que se imparte en teoría y se diferencian los siguientes temas:
 
