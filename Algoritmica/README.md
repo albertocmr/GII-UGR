@@ -1,16 +1,18 @@
 ## Algorítmica.
 
-| Nombre                | Algoritmica                                               |
+En esta asignatura, se realizan diferentes prácticas relacionadas con el temario que se imparte en teoría y se diferencian los siguientes temas:
+
+**Práctica1.** Cálculo de la eficiencia de diferentes algoritmos.
+
+| Nombre                | Algorítmica                                               |
 | --------------------- | --------------------------------------------------------- |
 | Grado correspondiente | Ingeniería Informática                                    |
 | Universidad           | Universidad de Granada                                    |
 | Curso                 | 2023/2024                                                 |
 
-En esta asignatura, se realizan diferentes prácticas relacionadas con el temario que se imparte en teoría y se diferencian los siguientes temas:
-
-**Práctica1.** Cálculo de la eficiencia de diferentes algoritmos.
 
 
 
-### Licencias
-El profesor que imparte la parte práctica de la asignatura y el creador de los guiones de prácticas es: Ignacio Javier Pérez Gálvez.
+### Propietarios
+El profesor que imparte la parte práctica de la asignatura es: Ignacio Javier Pérez Gálvez.
+Los códigos que se exigen en las prácticas el grupo de prácticas.
