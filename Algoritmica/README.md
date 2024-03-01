@@ -1,8 +1,8 @@
-## Algorítmica.
+# Algorítmica.
 
 En esta asignatura, se realizan diferentes prácticas relacionadas con el temario que se imparte en teoría y se diferencian los siguientes temas:
 
-**Práctica1.** Cálculo de la eficiencia de diferentes algoritmos.
+## Práctica1. Cálculo de la eficiencia de diferentes algoritmos.
 
 | Nombre                | Algorítmica                                               |
 | --------------------- | --------------------------------------------------------- |
