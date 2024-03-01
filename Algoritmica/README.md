@@ -2,7 +2,7 @@
 
 En esta asignatura, se realizan diferentes prácticas relacionadas con el temario que se imparte en teoría y se diferencian los siguientes temas:
 
-## Práctica1. Cálculo de la eficiencia de diferentes algoritmos.
+** Práctica1.** Cálculo de la eficiencia de diferentes algoritmos.
 
 | Nombre                | Algorítmica                                               |
 | --------------------- | --------------------------------------------------------- |
@@ -13,6 +13,6 @@ En esta asignatura, se realizan diferentes prácticas relacionadas con el temari
 
 
 
-### Propietarios
+## Propietarios
 El profesor que imparte la parte práctica de la asignatura es: Ignacio Javier Pérez Gálvez.
 Los códigos que se exigen en las prácticas el grupo de prácticas.
