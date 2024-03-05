@@ -26,8 +26,6 @@ En esta asignatura, se realizan diferentes prácticas relacionadas con el temari
 
 Los códigos que se exigen en las prácticas han sido realizados por el grupo de prácticas.
 
-El grupo está constituido por los siguientes alumnos:
-
-Alberto Cámara Ortiz, Cristóbal Pérez Simón, José Vera Castillo, Miguel Rodríguez Ayllón y Pablo Rejón Camacho.
+El grupo está constituido por los siguientes alumnos Alberto Cámara Ortiz, Cristóbal Pérez Simón, José Vera Castillo, Miguel Rodríguez Ayllón y Pablo Rejón Camacho.
 
 El profesor que imparte la parte práctica de la asignatura es Ignacio Javier Pérez Gálvez.
