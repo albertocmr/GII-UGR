@@ -10,15 +10,15 @@ En esta asignatura, se realizan diferentes prácticas relacionadas con el temari
 | Curso                 | 2023/2024                                                 |
 
 
-## Práctica1. Cálculo de la eficiencia de diferentes algoritmos.
+### Práctica1. Cálculo de la eficiencia de diferentes algoritmos.
 
-## Práctica2. 
+### Práctica2. 
 
-## Práctica3.
+### Práctica3.
 
-## Práctica4.
+### Práctica4.
 
-## Práctica5.
+### Práctica5.
 
 
 
