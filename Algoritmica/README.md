@@ -2,7 +2,6 @@
 
 En esta asignatura, se realizan diferentes prácticas relacionadas con el temario que se imparte en teoría y se diferencian los siguientes temas:
 
-** Práctica1.** Cálculo de la eficiencia de diferentes algoritmos.
 
 | Nombre                | Algorítmica                                               |
 | --------------------- | --------------------------------------------------------- |
@@ -11,9 +10,28 @@ En esta asignatura, se realizan diferentes prácticas relacionadas con el temari
 | Curso                 | 2023/2024                                                 |
 
 
+## Práctica1. Cálculo de la eficiencia de diferentes algoritmos.
+
+## Práctica2. 
+
+## Práctica3.
+
+## Práctica4.
+
+## Práctica5.
+
 
 
 ## Propietarios
-El profesor que imparte la parte práctica de la asignatura es: Ignacio Javier Pérez Gálvez.
 
 Los códigos que se exigen en las prácticas han sido realizados por el grupo de prácticas.
+
+El grupo está constituido por los siguientes alumnos:
+   -> Alberto Cámara Ortiz.
+   -> Cristóbal Pérez Simón.
+   -> José Vera Castillo.
+   -> Miguel Rodríguez Ayllón.
+   -> Pablo Rejón Camacho.
+
+El profesor que imparte la parte práctica de la asignatura: 
+   -> Ignacio Javier Pérez Gálvez.
