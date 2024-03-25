@@ -6,7 +6,7 @@ PROYECTO = "Calculo de la eficiencia de algoritmos."
 HOME = .
 TIEMPOS = $(HOME)$(HOME)/tiempos
 
-all: preambulo ejecutables ejecucion final
+all: preambulo ejecutables ejecucion clean-bin final
 
 #------------------------------------------------------------------------------
 preambulo:
@@ -98,11 +98,15 @@ ejecucion:
 	
 	@echo ------------------------------------------------------------
 #-------------------------------------------------------------------------------
-clean:
+clean-bin:
 	@echo Borrando ejecutables
 	-rm $(HOME)/*.bin
 	@echo ...Borrados ejecutables del proyecto
 	@echo
+	@echo ------------------------------------------------------------
+	@echo
+#-------------------------------------------------------------------------------
+clean-txt:
 	@echo Borrando tiempos
 	-rm $(TIEMPOS)/*.txt
 	@echo ...Borrados tiempos del proyecto
