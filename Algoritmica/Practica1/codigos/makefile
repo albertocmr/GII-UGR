@@ -31,7 +31,7 @@ ejecutables:
 	@g++ -o Burbuja.bin Burbuja.cpp -std=c++11
 	@echo Creado el archivo Burbuja.bin
 	
-	@g++ -o MergeSort.bin mergesort.cpp -std=c++11
+	@g++ -o Mergesort.bin mergesort.cpp -std=c++11
 	@echo Creado el archivo Mergesort.bin
 	
 	@g++ -o Insertionsort.bin insertionsort.cpp -std=c++11
@@ -67,7 +67,7 @@ ejecucion:
 	@echo
 	@echo
 	@echo Ejecucion del algoritmo Mergesort
-	$(HOME)/MergeSort.bin $(TIEMPOS)/mergeSort.txt \
+	$(HOME)/Mergesort.bin $(TIEMPOS)/mergeSort.txt \
 					12345 10000 20000 30000 40000 50000
 	
 	@echo
@@ -80,14 +80,14 @@ ejecucion:
 	@echo
 	@echo
 	@echo Ejecucion del algoritmo InsertionSort
-	$(HOME)/InsertionSort.bin $(TIEMPOS)/insertionSort.txt \
+	$(HOME)/Insertionsort.bin $(TIEMPOS)/insertionSort.txt \
 					12345 10000 20000 30000 40000 50000
 	
 	@echo
 	@echo
 	@echo Ejecucion del algoritmo Countingsort
 	@echo
-	$(HOME)/CountingSort.bin $(TIEMPOS)/countingSort.txt \
+	$(HOME)/Countingsort.bin $(TIEMPOS)/countingSort.txt \
 					12345 10000 20000 30000 40000 50000
 	
 	@echo
