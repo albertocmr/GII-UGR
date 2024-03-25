@@ -60,7 +60,7 @@ ejecucion:
 	@echo
 	@echo
 	@echo Ejecucion del algoritmo Burbuja:
-	$(HOME)/Burbuja.bin $(TIEMPOS)/burbuja.txt \
+	$(HOME)/Burbuja.bin $(HOME)/$(TIEMPOS)/burbuja.txt \
 					12345 10000 20000 30000 40000 50000
 	@echo
 	
