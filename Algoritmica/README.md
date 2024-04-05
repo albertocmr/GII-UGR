@@ -24,7 +24,7 @@ En esta práctica, nuestro trabajo a realizar consiste en analizar 5 algoritmos 
 Para esta práctica, debemos analizar 5 diferentes problemas, diseñar su algoritmos y comrpobar si puede ser abordado mediante la técnica de diseño de algoritmos Divide y Vencerás. En caso afirmativo, debemos aplicarla y comprobar si el orden de eficiencia del algoritmo ha mejorado.
 
 Códigos Fuerza Bruta:
-1. Mayoría absoluta: 
+1. Mayoría absoluta: [different repository](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica1/codigos/countingsort.cpp)
 2. Tuercas y tornillos:
 3. Producto de tres elementos:
 4. Eliminar elementos repetidos:
