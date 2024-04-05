@@ -11,25 +11,32 @@ void swap(int &a, int &b) {
     b = temp;
 }
 
-int partition(int arr[], int low, int high) {
-    int pivot = arr[high];
+int partition(int v1[], int v2[], int low, int high) {
+    int pivot = v2[(high+low)/2];
     int i = (low - 1);
+    int posicion;
 
     for (int j = low; j <= high - 1; j++) {
-        if (arr[j] < pivot) {
+        if(pivot == v1[j])
+            posicion = j;
+
+        if (v1[j] < pivot) {
             i++;
-            swap(arr[i], arr[j]);
+            swap(v1[i], v1[j]);
         }
     }
-    swap(arr[i + 1], arr[high]);
+    swap(v1[i + 1], v1[posicion]);
     return (i + 1);
 }
-
-void quickSort(int arr[], int low, int high) {
+/*
+v1 -->   {5, 12, 40, 18, 8}
+v2 -->     {12, 5, 18, 8, 40}
+*/
+void quickSort(int v1[], int v2[], int low, int high) {
     if (low < high) {
-        int pi = partition(arr, low, high);
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+        int pi = partition(v1, v2, low, high);
+        quickSort(v1, v2, low, pi - 1);
+        quickSort(v1, v2, pi + 1, high);
     }
 }
 

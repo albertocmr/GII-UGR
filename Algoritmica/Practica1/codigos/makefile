@@ -73,7 +73,7 @@ ejecucion:
 	@echo
 	@echo
 	@echo Ejecucion del algoritmo Quicksort
-	$(HOME)/Quicksort.bin $(TIEMPOS)/Quicksort.txt  \
+	$(HOME)/Quicksort.bin $(TIEMPOS)/quickSort.txt  \
 					12345 10000 20000 30000 40000 50000
 	
 		
@@ -97,6 +97,7 @@ ejecucion:
 	@echo Los valores obtenidos se encuentran en la carpeta $(TIEMPOS)
 	
 	@echo ------------------------------------------------------------
+	@echo
 #-------------------------------------------------------------------------------
 clean-bin:
 	@echo Borrando ejecutables
