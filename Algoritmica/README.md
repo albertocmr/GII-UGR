@@ -1,6 +1,6 @@
 # Algorítmica.
 
-En esta asignatura, se realizan diferentes prácticas relacionadas con el temario que se imparte en teoría y se diferencian los siguientes temas:
+
 
 
 | Nombre                | Algorítmica                                               |
@@ -9,6 +9,7 @@ En esta asignatura, se realizan diferentes prácticas relacionadas con el temari
 | Universidad           | Universidad de Granada                                    |
 | Curso                 | 2023/2024                                                 |
 
+En esta asignatura, se realizan diferentes prácticas relacionadas con el temario que se imparte en teoría y se diferencian los siguientes temas:
 
 ### Práctica1. Cálculo de la eficiencia de diferentes algoritmos.
 En esta práctica, nuestro trabajo a realizar consiste en analizar 5 algoritmos de ordenación distintos de manera teórica, práctica e híbrida. Una vez analizados los algoritmos y obtenido su orden de eficiencia, debemos comparar las gráficas de la eficiencia teórica e híbrida de los algoritmos de ordenación.
@@ -20,7 +21,7 @@ En esta práctica, nuestro trabajo a realizar consiste en analizar 5 algoritmos 
 5. Shell sort: [shellSort.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica1/codigos/shellSort.cpp)
 
 
-### Práctica2. Análisis de algoritmos Divide y Vencerás
+### Práctica2. Análisis de algoritmos Divide y Vencerás.
 Para esta práctica, debemos analizar 5 diferentes problemas, diseñar su algoritmos y comrpobar si puede ser abordado mediante la técnica de diseño de algoritmos Divide y Vencerás. En caso afirmativo, debemos aplicarla y comprobar si el orden de eficiencia del algoritmo ha mejorado.
 
 Códigos Fuerza Bruta:
@@ -39,11 +40,11 @@ Códigos Divide y Vencerás:
 
 Los enunciados de estos problemas se encuentran en el guión de la práctica. 
 
-### Práctica3. Algoritmos Greedy
+### Práctica3. Algoritmos Greedy.
 
-### Práctica4.
+### Práctica4. Programación dinámica.
 
-### Práctica5.
+### Práctica5. Exploración de grafos.
 
 
 
