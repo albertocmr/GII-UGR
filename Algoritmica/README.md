@@ -41,6 +41,16 @@ Códigos Divide y Vencerás:
 Los enunciados de estos problemas se encuentran en el guión de la práctica. 
 
 ### Práctica3. Algoritmos Greedy.
+El objetivo de esta práctica consiste en que todos los participantes del grupo semanos capaces de analizar y resolver una serie de problemas mediante la técnica Greedy de algoritmos voraces, siendo capaces de justificar su eficacia en términos de optimalidad.
+
+Códigos Algoritmos Greedy:
+1. Emparejamientos: [Ej1.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica3/codigos/Ej1.cpp)
+2. Conveniencia Máxima: [Ej2.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica3/codigos/Ej2.cpp)
+3. Problema de repostaje de autobus: [Ej3.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica3/codigos/Ej3.cpp)
+4. Red de sensores inalámbrica: [Ej4.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica3/codigos/Ej4.cpp)
+5. Algovilla del Tuerto: [Ej5.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica3/codigos/Ej5.cpp)
+
+Los enunciados de estos problemas se pueden encontrar en el principio de cada código o en el guión adjunto en la práctica.
 
 ### Práctica4. Programación dinámica.
 
