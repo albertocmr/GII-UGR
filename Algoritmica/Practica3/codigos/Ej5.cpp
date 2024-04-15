@@ -1,4 +1,4 @@
-```c++
+
 #include <algorithm>
 #include <iostream>
 #include <map>
@@ -140,6 +140,3 @@ int main() {
       cout << ele << endl;
 }
 
-
-
-```

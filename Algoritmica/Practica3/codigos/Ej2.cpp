@@ -9,11 +9,11 @@ struct MejorPosicion {
     int mejor_posicion = -1;
 };
 
-MejorPosicion mejorPosicion(int i, int n, set<int> &comensales_disponibles, int conveniencia[5][5]) {
+MejorPosicion mejorPosicion(int i, set<int> &comensales_disponibles, int conveniencia[5][5]) {
     MejorPosicion valores;
     for(auto comensal : comensales_disponibles) {
-        if(i != comensal % n) {
-            int conveniencia_total = conveniencia[i][comensal % n] + conveniencia[comensal % n][i];
+        if(i != comensal) {
+            int conveniencia_total = conveniencia[i][comensal] + conveniencia[comensal][i];
             if(conveniencia_total > valores.mejor_conveniencia) {
                 valores.mejor_posicion = comensal;
                 valores.mejor_conveniencia = conveniencia_total;
@@ -35,10 +35,10 @@ void asignarInvitados(int n, int conveniencia[5][5]) {
     for(int i = 0; i < n && !comensales_disponibles.empty(); i++) {
         if(invitados.empty()) {
             // Colocamos al comensal izquierda:
-            MejorPosicion valores = mejorPosicion(i, n, comensales_disponibles, conveniencia);
+            MejorPosicion valores = mejorPosicion(i, comensales_disponibles, conveniencia);
             
-            conveniencia[i][(valores.mejor_posicion) % n] = 0;
-            conveniencia[(valores.mejor_posicion) % n][i] = 0;
+            conveniencia[i][valores.mejor_posicion] = 0;
+            conveniencia[valores.mejor_posicion][i] = 0;
             invitados.push_back(valores.mejor_posicion);
             comensales_disponibles.erase(valores.mejor_posicion);
             
@@ -46,18 +46,18 @@ void asignarInvitados(int n, int conveniencia[5][5]) {
             comensales_disponibles.erase(i);
 
             // Colocamos al comensal derecha:
-            valores = mejorPosicion(i, n, comensales_disponibles, conveniencia);
-            conveniencia[i][(valores.mejor_posicion) % n] = 0;
-            conveniencia[(valores.mejor_posicion) % n][i] = 0;
-            invitados.push_back((valores.mejor_posicion) % n);
+            valores = mejorPosicion(i,comensales_disponibles, conveniencia);
+            conveniencia[i][valores.mejor_posicion] = 0;
+            conveniencia[valores.mejor_posicion][i] = 0;
+            invitados.push_back(valores.mejor_posicion);
             comensales_disponibles.erase(valores.mejor_posicion);
             i++;
         } else {
             // Colocamos al mejor comensal a su derecha
-            MejorPosicion valores = mejorPosicion(invitados[i], n, comensales_disponibles, conveniencia);
-            conveniencia[invitados[i]][(valores.mejor_posicion) % n] = 0;
-            conveniencia[(valores.mejor_posicion) % n][invitados[i]] = 0;
-            invitados.push_back((valores.mejor_posicion) % n);
+            MejorPosicion valores = mejorPosicion(invitados[i], comensales_disponibles, conveniencia);
+            conveniencia[invitados[i]][valores.mejor_posicion] = 0;
+            conveniencia[valores.mejor_posicion][invitados[i]] = 0;
+            invitados.push_back(valores.mejor_posicion);
             comensales_disponibles.erase(valores.mejor_posicion);
         }
     }
