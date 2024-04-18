@@ -20,6 +20,8 @@ En esta práctica, nuestro trabajo a realizar consiste en analizar 5 algoritmos 
 4. Selection sort: [Selection.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica1/codigos/Selection.cpp)
 5. Shell sort: [shellSort.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica1/codigos/shellSort.cpp)
 
+Calificación obtenida --> 8.75/10.
+
 
 ### Práctica2. Análisis de algoritmos Divide y Vencerás.
 Para esta práctica, debemos analizar 5 diferentes problemas, diseñar su algoritmos y comrpobar si puede ser abordado mediante la técnica de diseño de algoritmos Divide y Vencerás. En caso afirmativo, debemos aplicarla y comprobar si el orden de eficiencia del algoritmo ha mejorado.
@@ -38,6 +40,8 @@ Códigos Divide y Vencerás:
 4. Eliminar elementos repetidos: [Ej4_DyV.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica2/codigos/Ej4_DyV.cpp)
 5. Organización de un campeonato: [Ej5_DyV.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica2/codigos/Ej5_DyV.cpp)
 
+Calificación obtenida --> 8.0/10.
+
 Los enunciados de estos problemas se encuentran en el guión de la práctica. 
 
 ### Práctica3. Algoritmos Greedy.
@@ -50,12 +54,20 @@ Códigos Algoritmos Greedy:
 4. Red de sensores inalámbrica: [Ej4.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica3/codigos/Ej4.cpp)
 5. Algovilla del Tuerto: [Ej5.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica3/codigos/Ej5.cpp)
 
-Los enunciados de estos problemas se pueden encontrar en el principio de cada código o en el guión adjunto en la práctica.
+Los enunciados de estos problemas se encuentran en el guión de la práctica. 
 
 ### Práctica4. Programación dinámica.
 
+
+Códigos Programación Dinámica:
+
+Calificación obtenida --> /10.
+
 ### Práctica5. Exploración de grafos.
 
+Códigos Exploración de grafos:
+
+Calificación obtenida --> /10.
 
 
 ## Propietarios
