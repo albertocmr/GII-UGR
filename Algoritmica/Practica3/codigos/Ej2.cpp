@@ -21,7 +21,6 @@ MejorPosicion mejorPosicion(int i, set<int> &comensales_disponibles, int conveni
         }    
     }   
 
-    cout << "La mejor conveniencia entre el invitado " << i << " y el comensal " << valores.mejor_posicion << " es: " << valores.mejor_conveniencia << endl;
     return valores;
 }
 

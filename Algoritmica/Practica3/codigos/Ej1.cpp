@@ -15,9 +15,10 @@ vector < pair < int,int > > Mejor_emparejamiento(vector<vector<int>> &preferenci
   while (numEmparejados < n) {
     int estudianteLibre;
     // Compruebo cuál es el siguiente almumno sin pareja
-    for (estudianteLibre = 0; estudianteLibre < n; ++estudianteLibre) {
+    bool libre = false;
+    for (estudianteLibre = 0; estudianteLibre < n && !libre; ++estudianteLibre) {
       if (disponible[estudianteLibre]) {
-        break;
+        libre = true;
       }
     }
 
