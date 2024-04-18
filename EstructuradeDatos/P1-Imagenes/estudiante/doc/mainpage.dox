@@ -1,0 +1,105 @@
+/*! \mainpage Abstracción. TDA Imágenes
+Práctica realizada por Alberto Cámara Ortiz y Hugo Béjar Murcia
+
+# Introducción
+
+
+En esta práctica, hemos tenido que crear un fichero .cpp para cada ejercicio. Para ello, hemos copiado el fichero .cpp que se nos daba para probar la función negativo 
+y le hemos hecho a cada uno los cambios correspondientes para adaptar el fichero al caso concreto de cada ejercicio. Estos cambios se resumen en el cambio de los parámetros 
+recibidos, el número de parámetros, el uso de la función que se le aplicará al objeto Image y la creación de otro objeto Image para no modificar el objeto que ya teníamos. 
+Las funciones Load y Save se realizan al objeto necesario para cada ejercicio.
+
+# Ejercicio de ejemplo
+## Clase negativo:
+
+Calcula el negativo de una imagen
+
+> __negativo__ \<FichImagenOriginal\> \<FichImagenDestino\>
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
+@param <FichImagenDestino> Imagen PGM resultado de calcular el negativo
+
+@image html negativo.png "./negativo img/vacas.pgm expected/negativo.pgm"
+
+# Ejercicio 1
+Este ejercicio nos pedía obtener una imagen con menor o igual dimensión a partir de una imagen PGM. Para ello, el ejercicio nos exige los parámetros de la esquina superior izquierda y la dimensión de la imagen resultado, es por ello que basta con un doble-bucle en el que copie en un objeto diferente los píxeles indicados, dando como resultado una imagen de copia con dimensiones dadas de la imagen original.
+
+## Clase Crop():
+
+Genera, por copia, una imagen PGM a partir de otra imagen PGM de un tamaño menor o igual que la original.
+
+> __subimagen__ \<FichImagenOriginal\> \<FichImagenDestino\> \<Fila\> \<Columna\> \<FilaSub\> \<ColsSub\>
+@param "<FichImagenOriginal>" Nombre del fichero que contiene la imagen original.
+@param "<FichImagenDestino>" Nombre del fichero que contendrá la subimagen resultado.
+@param "<Fila>" Fila de la esquina superior izquierda de la subimagen que se va extraer.
+@param "<Columna>" Columna de la esquina superior izquierda de la subimagen que se va a extraer.
+@param "<FilaSub>" Indica el número de filas de la subimagen que se va a extraer.
+@param "<ColsSub>" Indica el número de columnas de la subimagen que se va a extraer.
+@return Imagen con el recorte realizado.
+@post El objeto que llama a la función no se modifica.
+
+@image html subimagen.png "./subimagen img/vacas.pgm expected/subimagen.pgm 85 145 60 80"
+
+# Ejercicio 2
+En este ejercicio, nos pedía realizar a una imagen pgm una operación que nos devolverá una imagen resultado con un factor zoom aplicado. Para calcular dicho zoom, los píxeles que se encuentran en la imagen original se colocaban en las posiciones que tienen filas y columnas pares simultáneamente, y los demás píxeles necesarios se calculan como una media de las posiciones colindantes. Se han utilizado comprobaciones en la función para evitar desbordamiento en la dimensión de la imagen, que permite ajustar el valor de la  dimensión de la imagen al máximo posible en caso de que ocurra este suceso.
+
+## Clase Zoom2X():
+
+Esta función realiza un zoom 2x de una porción mediante un simple procedimiento de interpolación consistente en construir a partir de una subimagen NxN, una imagen de dimensión (2N-1) x (2N-1).
+
+> __zoom__ \<FichImagenOriginal\> \<FichImagenDestino\> \<Fila\> \<Columna\> \<Lado\>
+@param "<FichImagenOriginal>" Nombre del fichero que contiene la imagen original.
+@param "<FichImagenDestino>" Nombre del fichero que contendrá la subimagen resultado.
+@param "<Fila>" Fila de la esquina superior izquierda de la subimagen que se va extraer.
+@param "<Columna>" Columna de la esquina superior izquierda de la subimagen que se va a extraer.
+@param "<Lado>" Tamaño del lado del cuadrado. Debe estar incluído en la imagen.
+@return Devuelve la región aumentada 2 veces como una imagen nueva.
+@post La imagen original no se modifica
+@post La imagen resultante tendrá un tamaño (2*lado - 1) X (2*lado - 1), siempre y cuando lado más col o fil sea menor que las dimensiones de la imagen original, sino se modificará.
+
+@image html zoom.png "./zoom img/vacas.pgm expected/zoom.pgm 85 145 60"
+
+# Ejercicio 3
+Este ejercicio nos permite obtener una imagen resultado con unas dimensiones inferiores a la imagen original aplicando un factor de reducción a los píxeles de la imagen original, de manera que los valores de los píxeles de la imagen resultado se redondearán tras realizar la media de los valores que los rodean. Para la realización de este ejercicio, se han utilizado 4 bucles anidados, donde los dos primeros bucles se encargan de recorrer la imagen y los 2 bucles siguientes de recorrer el número de valores (dependen del factor de reducción aplicado) que rodean al píxel en el que nos encontramos en ese momento (pixel(i,j)). Tras ello, se realiza la media y se redondea el valor que será almacenado en la imagen resultado (mismo objeto)
+## Clase Subsample():
+
+Esta función crea un icono a partir de una imagen.
+
+> __icono__ \<FichImagenOriginal\> \<FichImagenDestino\> \<factor\>
+@param factor Factor de reducción de la imagen original respecto al icono
+@pre factor > 0
+@return Devuelve la imagen iconizada
+@post La imagen no se modifica
+@post La imagen resultante tendrá un tamaño int(filas/factor) X int(columnas/factor).Descartando los decimales de la división
+
+@image html icono.png "./icono img/vacas.pgm expected/icono.pgm 2"
+
+# Ejercicio 4
+En este ejercicio, a partir de una imagen PGM, generamos una imagen de niveles de gris con más contraste que la imagen original, le aplicaremos la operación histogram stretching, en la que la transformación depende del valor del píxel y de los umbrales indicados por parámetros a partir de las precondiciones que se indicarán a continuación en la clase.
+## Clase AdjustContrast():
+
+Esta función modifica el contraste de una imagen.
+> __contraste__ \<FichImagenOriginal\> \<FichImagenDestino\> \<e1\> \<e2\> \<s1\> \<s2\>
+@param e1 Umbral inferior de la imagen de entrada
+@param e2 Umbral superior de la imagen de entrada
+@param s1 Umbral inferior de la imagen de salida
+@param s2 Umbral superior de la imagen de salida
+@pre 0<=(e1, e2, s1, s2) <=255
+@pre e1 < e2
+@pre s1 < s2
+@post El objeto que llama a la función es modificado.
+
+
+@image html contraste.png "./contraste img/vacas.pgm expected/contraste.pgm 100 180 60 180"
+
+
+## Aclaración
+Todas las imágenes que hemos obtenido las hemos pasado a .png para poder añadirlas en esta página. 
+Para ello, ha sido necesario cambiarles el formato de .pgm a .png y se han guardado en la carpeta /estudiante/doc.
+De todos modos, las imágenes que se adquirian tras ejecutar los programas están guardadas sin el sufijo _sub en la carpeta expected.
+Cada imagen contiene como pie de foto el comando utilizado junto a sus parámetros que permiten obtenerla.
+*/
+
+
+
+
+
