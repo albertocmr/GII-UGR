@@ -24,7 +24,7 @@ Calificación obtenida --> 8.75/10.
 
 
 ### Práctica2. Análisis de algoritmos Divide y Vencerás.
-Para esta práctica, debemos analizar 5 diferentes problemas, diseñar su algoritmos y comrpobar si puede ser abordado mediante la técnica de diseño de algoritmos Divide y Vencerás. En caso afirmativo, debemos aplicarla y comprobar si el orden de eficiencia del algoritmo ha mejorado.
+Para esta práctica, debemos analizar 5 diferentes problemas, diseñar su algoritmos y comprobar si puede ser abordado mediante la técnica de diseño de algoritmos Divide y Vencerás. En caso afirmativo, debemos aplicarla y comprobar si el orden de eficiencia del algoritmo ha mejorado.
 
 Códigos Fuerza Bruta:
 1. Mayoría absoluta: [Ej1_FB.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica2/codigos/Ej1_FB.cpp)
@@ -56,18 +56,20 @@ Códigos Algoritmos Greedy:
 
 Los enunciados de estos problemas se encuentran en el guión de la práctica. 
 
-### Práctica4. Programación dinámica.
+### Práctica4. Exploración de grafos.
+
+Códigos Exploración de grafos:
+
+Calificación obtenida --> /10.
+
+### Práctica5. Programación dinámica.
 
 
 Códigos Programación Dinámica:
 
 Calificación obtenida --> /10.
 
-### Práctica5. Exploración de grafos.
 
-Códigos Exploración de grafos:
-
-Calificación obtenida --> /10.
 
 
 ## Propietarios
