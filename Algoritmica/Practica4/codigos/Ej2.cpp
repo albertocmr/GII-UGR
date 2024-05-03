@@ -4,67 +4,35 @@
 
 using namespace std;
 
-struct MejorPosicion {
-    int mejor_conveniencia = -1;
-    int mejor_posicion = -1;
-};
+/*
+Se va a celebrar una cena de gala a la que asistirán n invitados. Todos se van a sentar alrededor de una única
+gran mesa circular, de forma que cada invitado tendrá sentados junto a él a otros dos comensales (uno a su
+izquierda y otro a su derecha). En función de las características de cada invitado (por ejemplo categoría o
+puesto, lugar de procedencia,...) existen unas normas de protocolo que indican el nivel de conveniencia de
+que dos invitados se sienten en lugares contiguos (supondremos que dicho nivel es un número entero entre
+0 y 100). El nivel de conveniencia total de una asignación de invitados a su puesto en la mesa es la suma
+de todos los niveles de conveniencia de cada invitado con cada uno de los dos invitados sentados a su lado.
+Se desea sentar a los invitados de forma que el nivel de conveniencia global sea lo mayor posible. Diseñar
+e implementar un algoritmo de backtracking para resolver el problema.
+*/
 
-MejorPosicion mejorPosicion(int i, set<int> &comensales_disponibles, int conveniencia[5][5]) {
-    MejorPosicion valores;
-    for(auto comensal : comensales_disponibles) {
-        if(i != comensal) {
-            int conveniencia_total = conveniencia[i][comensal] + conveniencia[comensal][i];
-            if(conveniencia_total > valores.mejor_conveniencia) {
-                valores.mejor_posicion = comensal;
-                valores.mejor_conveniencia = conveniencia_total;
-            }
-        }    
-    }   
-
-    return valores;
-}
-
-void asignarInvitados(int n, int conveniencia[5][5]) {
-    set<int> comensales_disponibles;
+// Asignamos los invitados a la mesa utilizando backtracking
+// Problema de maximización de conveniencia
+void asignarInvitados(int n, int conveniencia[5][5]){
     vector<int> invitados;
+    set<int> comensales_disponibles;
 
     for(int i = 0; i < n; i++)
         comensales_disponibles.insert(i);
 
     for(int i = 0; i < n && !comensales_disponibles.empty(); i++) {
-        if(invitados.empty()) {
-            // Colocamos al comensal izquierda:
-            MejorPosicion valores = mejorPosicion(i, comensales_disponibles, conveniencia);
-            
-            conveniencia[i][valores.mejor_posicion] = 0;
-            conveniencia[valores.mejor_posicion][i] = 0;
-            invitados.push_back(valores.mejor_posicion);
-            comensales_disponibles.erase(valores.mejor_posicion);
-            
-            invitados.push_back(i);
-            comensales_disponibles.erase(i);
-
-            // Colocamos al comensal derecha:
-            valores = mejorPosicion(i,comensales_disponibles, conveniencia);
-            conveniencia[i][valores.mejor_posicion] = 0;
-            conveniencia[valores.mejor_posicion][i] = 0;
-            invitados.push_back(valores.mejor_posicion);
-            comensales_disponibles.erase(valores.mejor_posicion);
-            i++;
-        } else {
-            // Colocamos al mejor comensal a su derecha
-            MejorPosicion valores = mejorPosicion(invitados[i], comensales_disponibles, conveniencia);
-            conveniencia[invitados[i]][valores.mejor_posicion] = 0;
-            conveniencia[valores.mejor_posicion][invitados[i]] = 0;
-            invitados.push_back(valores.mejor_posicion);
-            comensales_disponibles.erase(valores.mejor_posicion);
-        }
+        
     }
-    for(auto invitado : invitados)
-        cout << invitado << " ";
-    
-    cout << endl;
+
+
 }
+
+
 
 int main() {
     int n = 5;

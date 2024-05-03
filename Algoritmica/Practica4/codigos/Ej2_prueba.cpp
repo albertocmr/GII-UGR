@@ -45,10 +45,10 @@ int main() {
     vector<vector<int>> conveniencia(n, vector<int>(n));
     
     // Ejemplo de conveniencia entre invitados (puedes cambiar estos valores según tus necesidades)
-    conveniencia[0][0] = 0; conveniencia[0][1] = 80; conveniencia[0][2] = 90; conveniencia[0][3] = 70;
-    conveniencia[1][0] = 70; conveniencia[1][1] = 0; conveniencia[1][2] = 85; conveniencia[1][3] = 75;
-    conveniencia[2][0] = 90; conveniencia[2][1] = 85; conveniencia[2][2] = 0; conveniencia[2][3] = 95;
-    conveniencia[3][0] = 80; conveniencia[3][1] = 75; conveniencia[3][2] = 95; conveniencia[3][3] = 0;
+    conveniencia[0][0] = 0; conveniencia[0][1] = 1; conveniencia[0][2] = 2; conveniencia[0][3] = 3;
+    conveniencia[1][0] = 3; conveniencia[1][1] = 0; conveniencia[1][2] = 1; conveniencia[1][3] = 5;
+    conveniencia[2][0] = 24; conveniencia[2][1] = 7; conveniencia[2][2] = 0; conveniencia[2][3] = 2;
+    conveniencia[3][0] = 1; conveniencia[3][1] = 52; conveniencia[3][2] = 8; conveniencia[3][3] = 0;
     
     vector<int> asignacion_actual;
     vector<bool> usado(n, false);
@@ -60,7 +60,7 @@ int main() {
     cout << "Nivel de conveniencia total máximo: " << mejor_conveniencia << endl;
     cout << "Orden de los comensales:" << endl;
     for (int i = 0; i < n; ++i) {
-        cout << "Comensal " << i+1 << " se sienta en el lugar " << mejor_asignacion[i]+1 << endl;
+        cout << "Comensal " << i << " se sienta en el lugar " << mejor_asignacion[i] << endl;
     }
 
     return 0;
