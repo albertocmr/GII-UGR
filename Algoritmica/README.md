@@ -59,6 +59,9 @@ Los enunciados de estos problemas se encuentran en el guión de la práctica.
 ### Práctica4. Exploración de grafos.
 
 Códigos Exploración de grafos:
+1. Emparejamientos:
+
+2. Conveniencia Máxima: [Ej2.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica4/codigos/Ej2.cpp)
 
 Calificación obtenida --> /10.
 
