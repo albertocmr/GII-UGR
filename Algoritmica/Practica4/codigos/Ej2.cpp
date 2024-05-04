@@ -47,12 +47,6 @@ int main() {
     vector<vector<int>> conveniencia(n, vector<int>(n));
     
     // Ejemplo de conveniencia entre invitados (puedes cambiar estos valores según tus necesidades)
-    /*
-    conveniencia[0][0] = 0; conveniencia[0][1] = 1; conveniencia[0][2] = 2; conveniencia[0][3] = 3;
-    conveniencia[1][0] = 3; conveniencia[1][1] = 0; conveniencia[1][2] = 1; conveniencia[1][3] = 5;
-    conveniencia[2][0] = 24; conveniencia[2][1] = 7; conveniencia[2][2] = 0; conveniencia[2][3] = 2;
-    conveniencia[3][0] = 1; conveniencia[3][1] = 52; conveniencia[3][2] = 8; conveniencia[3][3] = 0;
-    */
     conveniencia[0][0] = 0; conveniencia[0][1] = 5; conveniencia[0][2] = 4; conveniencia[0][3] = 6;
     conveniencia[1][0] = 2; conveniencia[1][1] = 0; conveniencia[1][2] = 7; conveniencia[1][3] = 9;
     conveniencia[2][0] = 6; conveniencia[2][1] = 2; conveniencia[2][2] = 0; conveniencia[2][3] = 3;
@@ -64,11 +58,16 @@ int main() {
     int mejor_conveniencia = INT_MIN;
     vector<int> mejor_asignacion;
 
+
+    // Añadimos el primer invitado a la asignación, esto nos permitirá no repetir
+    // algunas asignaciones que son equivalentes
     asignacion_actual.push_back(0);
     usado[0] = true;
 
     backtracking(asignacion_actual, conveniencia, usado, n, mejor_conveniencia, mejor_asignacion);
 
+
+    // Mostramos los resultados obtenidos tras la ejecución del algoritmo
     cout << "Nivel de conveniencia total máximo: " << endl << "\t" << mejor_conveniencia << endl;
     cout << "Orden de los comensales:" << endl;
     for (int i = 0; i < n; ++i) {
