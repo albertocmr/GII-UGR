@@ -58,10 +58,20 @@ Los enunciados de estos problemas se encuentran en el guión de la práctica.
 
 ### Práctica4. Exploración de grafos.
 
+El objetivo de la práctica consiste en que el alumno sea capaz de analizar una serie de problemas y
+resolverlos mediante las técnicas de diseño de algoritmos basadas en exploración de grafos, como la
+vuelta atrás (Backtracking) o la ramificación y poda (Branch&Bound)
+
 Códigos Exploración de grafos:
-1. Emparejamientos:
+1. Emparejamientos: [Ej1.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica4/codigos/Ej1.cpp)
 
 2. Conveniencia Máxima: [Ej2.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica4/codigos/Ej2.cpp)
+
+3. Juego del senku: [Ej3.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica4/codigos/Ej3.cpp)
+
+4. Laberinto (backtracking): [Ej4.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica4/codigos/Ej4.cpp)
+
+5. Laberinto (camino mas corto): [Ej5.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica4/codigos/Ej5.cpp)
 
 Calificación obtenida --> /10.
 
