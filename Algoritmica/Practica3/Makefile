@@ -1,5 +1,5 @@
-# Título: Makefile para la práctica 2 de algorítmica.
-# Práctica 2. Algoritmos Divide y Vencerás.
+# Título: Makefile para la práctica 3 de algorítmica.
+# Práctica 3. Algoritmos voraces.
 
 PROYECTO = "Algoritmos Greedy."
 HOME = .
