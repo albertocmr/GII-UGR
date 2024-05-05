@@ -74,14 +74,8 @@ ej2:
 ej3:
 	@echo
 	@echo Ejecucion del algoritmo Ej3
-	$(CODIGOS)/Ej3.bin 1000 20 150
+	$(CODIGOS)/Ej3.bin
 	@echo
-	@echo ------------------------------------------------------------
-	@echo Esta ejecucion está hecha con los argumentos ./Ej3.bin 1000 20 150
-	@echo Al usar una semilla aleatoria, habrá veces que genere gasolineras 
-	@echo que no se pueden alcanzar. Puede volver a ejecutar y probar suerte
-	@echo o cambiar el número que corresponde al número de gasolineras o al
-	@echo tanque de gasolina.
 	@echo ------------------------------------------------------------
 	@echo
 #------------------------------------------------------------------------------

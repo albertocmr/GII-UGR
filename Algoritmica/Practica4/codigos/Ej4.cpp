@@ -38,11 +38,13 @@ bool SolBacktracking(vector<vector<int>>& laberinto, int x, int y, vector<vector
 }
 
 int main() {
-    vector<vector<int>> laberinto = {{1, 0, 0, 0, 0},
-                                    {1, 0, 0, 1, 0},
-                                    {0, 1, 1, 1, 0},
-                                    {0, 0, 0, 1, 0},
-                                    {0, 0, 0, 1, 1} };
+    vector<vector<int>> laberinto = {
+                                     {1, 0, 0, 0, 0},
+                                     {1, 1, 0, 1, 0},
+                                     {0, 1, 1, 1, 0},
+                                     {0, 0, 0, 1, 0},
+                                     {0, 0, 0, 1, 1} 
+                                    };
 
     vector<vector<int>> solucion(N, vector<int>(N, 0)); // Inicializamos la matriz solución
 

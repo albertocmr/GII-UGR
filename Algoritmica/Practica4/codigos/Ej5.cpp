@@ -55,11 +55,13 @@ void SolBackTracking(vector<vector<int>> &laberinto, vector<vector<bool>> &visit
 
 int main()
 {
-    vector<vector<int>> laberinto = {{1, 0, 0, 0, 0},
-                                    {1, 0, 1, 1, 1},
-                                    {1, 1, 1, 0, 1},
-                                    {1, 0, 0, 0, 1},
-                                    {1, 1, 1, 1, 1} };
+    vector<vector<int>> laberinto = {
+                                     {1, 0, 0, 0, 0},
+                                     {1, 0, 1, 1, 1},
+                                     {1, 1, 1, 0, 1},
+                                     {1, 0, 0, 0, 1},
+                                     {1, 1, 1, 1, 1}
+                                    };
 
     vector<vector<bool>> visitado;
     visitado.resize(N, vector<bool>(N));
