@@ -49,7 +49,7 @@ int main() {
     vector<vector<int>> solucion(N, vector<int>(N, 0)); // Inicializamos la matriz solución
 
     if (SolBacktracking(laberinto, 0, 0, solucion)) {
-        cout << "Solucion encontrada:\n";
+        cout << endl << "Solucion encontrada:\n";
         for (int i = 0; i < N; ++i) {
             for (int j = 0; j < N; ++j)
                 cout << solucion[i][j] << " ";

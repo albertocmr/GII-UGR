@@ -58,6 +58,15 @@ int main() {
     int mejor_conveniencia = INT_MIN;
     vector<int> mejor_asignacion;
 
+    cout << endl << "Matriz de conveniencia:" << endl;
+    for (int i = 0; i < n; ++i) {
+        cout << "\t";
+        for (int j = 0; j < n; ++j) {
+            cout << conveniencia[i][j] << " ";
+        }
+        cout << endl;
+    }
+
 
     // Añadimos el primer invitado a la asignación, esto nos permitirá no repetir
     // algunas asignaciones que son equivalentes
@@ -68,7 +77,7 @@ int main() {
 
 
     // Mostramos los resultados obtenidos tras la ejecución del algoritmo
-    cout << "Nivel de conveniencia total máximo: " << endl << "\t" << mejor_conveniencia << endl;
+    cout << endl << "Nivel de conveniencia total máximo: " << endl << "\t" << mejor_conveniencia << endl;
     cout << "Orden de los comensales:" << endl;
     for (int i = 0; i < n; ++i) {
         cout << (i == 0 ? "\t{" : "") << mejor_asignacion[i] << (i == n - 1 ? "" : ", ");    

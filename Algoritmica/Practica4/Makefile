@@ -48,9 +48,8 @@ ejecutables:
 	@echo Creado el archivo Ej5.bin
 	
 	@echo
-	
 	@echo Fin creacion de archivos .bin
-	
+	@echo
 	@echo
 	@echo ------------------------------------------------------------
 	@echo
@@ -60,6 +59,7 @@ ej1:
 	@echo Ejecucion del algoritmo Ej1
 	$(CODIGOS)/Ej1.bin
 	@echo
+	@echo
 	@echo ------------------------------------------------------------
 	@echo
 #------------------------------------------------------------------------------
@@ -67,6 +67,7 @@ ej2:
 	@echo
 	@echo Ejecucion del algoritmo Ej2
 	$(CODIGOS)/Ej2.bin
+	@echo
 	@echo
 	@echo ------------------------------------------------------------
 	@echo
@@ -76,15 +77,14 @@ ej3:
 	@echo Ejecucion del algoritmo Ej3
 	$(CODIGOS)/Ej3.bin
 	@echo
+	@echo
 	@echo ------------------------------------------------------------
 	@echo
 #------------------------------------------------------------------------------
 ej4:
 	@echo
-	@echo
 	@echo Ejecucion del algoritmo Ej4
 	$(CODIGOS)/Ej4.bin
-	@echo
 	@echo
 	@echo
 	@echo ------------------------------------------------------------
@@ -94,6 +94,7 @@ ej5:
 	@echo Ejecucion del algoritmo Ej5
 	$(CODIGOS)/Ej5.bin
 	@echo
+	@echo
 	@echo ------------------------------------------------------------
 	@echo
 #------------------------------------------------------------------------------
@@ -101,6 +102,7 @@ clean:
 	@echo Borrando ejecutables
 	-rm $(CODIGOS)/*.bin
 	@echo ...Borrados ejecutables del proyecto
+	@echo
 	@echo
 	@echo ------------------------------------------------------------
 	@echo

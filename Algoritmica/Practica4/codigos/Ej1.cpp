@@ -37,9 +37,9 @@ Resultado Emparejar( vector< vector<int> > preferencias ,int n, vector<bool>& em
 
             Resultado currentResul = Emparejar(preferencias,n, emparejados, ParejasActuales, sumaActual + valorPareja, indice + 1, bestResul.sumaMaxima);
 
-            if ( currentResul.sumaMaxima > bestResul.sumaMaxima ){
+            if ( currentResul.sumaMaxima > bestResul.sumaMaxima )
                 bestResul = currentResul;
-            }
+            
             // Deshacemos cambios para la próxima iteración
             emparejados[indice] = false;
             emparejados[j] = false;
@@ -52,43 +52,43 @@ Resultado Emparejar( vector< vector<int> > preferencias ,int n, vector<bool>& em
 
 int main() {
 
-  vector< vector<int> > preferencias;
-  int n = 4;
+    vector< vector<int> > preferencias;
+    int n = 4;
     preferencias.resize(n, vector<int>(n));
 
-  // Semilla para la generación de números aleatorios
-  srand(time(0));
+    // Semilla para la generación de números aleatorios
+    srand(time(0));
 
-  // Rellenar la matriz línea por línea con números aleatorios
-  for (int i = 0; i < n; ++i) {
-      for (int j = 0; j < n; ++j) {
-        if ( i != j ){
-            preferencias[i][j] = 1 + rand() % 9; // Números aleatorios entre 0 y 9 (inclusive)
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if ( i != j )
+                preferencias[i][j] = 1 + rand() % 9; // Números aleatorios entre 0 y 9 (inclusive)
         }
-      }
-  }
-
-  // Enseño el vector
-  for (int i = 0; i < n; ++i) {
-    for (int j = 0; j < n; ++j) {
-      cout << preferencias[i][j] << " ";
     }
-    cout << endl;
-  }
 
-  vector<bool> emparejado(n, false);
-  vector< pair<int, int>> currentPairs;
-  Resultado finalResul = Emparejar(preferencias,n, emparejado, currentPairs, 0, 0, 0);
+    vector<bool> emparejado(n, false);
+    vector< pair<int, int>> currentPairs;
+    Resultado finalResul = Emparejar(preferencias,n, emparejado, currentPairs, 0, 0, 0);
 
- 
-  int suma = 0;
-     cout << "The best pairs are:" << endl;
-  for (const auto& pair : finalResul.mejoresParejas) {
-      cout << "(" << (pair.first)+1 << ", " << (pair.second)+1 << ")" << endl;
-    suma += preferencias[pair.first][pair.second] * preferencias[pair.second][pair.first];
- 
-  }
-  cout << "La maxima suma de los emparejamientos es: : " << suma << endl;
- 
+
+    int suma = 0;
+
+    cout << endl << "Matriz de preferencias:" << endl;
+    for (int i = 0; i < n; ++i) {
+        cout << "\t";
+        for (int j = 0; j < n; ++j) {
+            cout << preferencias[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    cout << endl << "Parejas:" << endl;
+    for (const auto& pair : finalResul.mejoresParejas) {
+        cout << "\t(" << (pair.first)+1 << ", " << (pair.second)+1 << ")" << endl;
+        suma += preferencias[pair.first][pair.second] * preferencias[pair.second][pair.first];
+
+    }
+    cout << "La maxima suma de los emparejamientos es:\n\t" << suma << endl;
+
    
 }

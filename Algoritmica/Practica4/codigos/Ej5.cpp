@@ -70,7 +70,7 @@ int main()
     SolBackTracking(laberinto, visitado, solucion, 0, 0, min_dist, 0);
 
     if (min_dist != INT_MAX){
-        cout << "Solucion encontrada con longitud " << min_dist << "\n";
+        cout << endl << "Solucion encontrada con longitud " << min_dist << "\n";
         for (int x = 0; x < N; ++x) {
             for (int y = 0; y < N; ++y) {
                 cout << solucion[x][y] << " ";
