@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const int N = 10; // Tamaño del laberinto
+const int N = 5; // Tamaño del laberinto
 
 // Función para comprobar si una celda es válida
 bool CasillaValida(vector<vector<int>> &laberinto, vector<vector<bool>> &visitado, int x, int y)
@@ -55,13 +55,11 @@ void SolBackTracking(vector<vector<int>> &laberinto, vector<vector<bool>> &visit
 
 int main()
 {
-    vector<vector<int>> laberinto = {
-                                     {1, 0, 0, 0, 0},
-                                     {1, 0, 1, 1, 1},
-                                     {1, 1, 1, 0, 1},
-                                     {1, 0, 0, 0, 1},
-                                     {1, 1, 1, 1, 1}
-                                    };
+    vector<vector<int>> laberinto = {{1, 0, 0, 0, 0},
+                                    {1, 0, 1, 1, 1},
+                                    {1, 1, 1, 0, 1},
+                                    {1, 0, 0, 0, 1},
+                                    {1, 1, 1, 1, 1} };
 
     vector<vector<bool>> visitado;
     visitado.resize(N, vector<bool>(N));
@@ -86,4 +84,3 @@ int main()
 
     return 0;
 }
-
