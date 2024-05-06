@@ -26,7 +26,6 @@ preambulo:
 	@echo ------------------------------------------------------------
 	@echo
 
-
 #------------------------------------------------------------------------------
 ejecutables:
 	@echo Creacion de los archivos .bin de todos los algoritmos.
