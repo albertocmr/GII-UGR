@@ -60,7 +60,17 @@ int main()
                                     {1, 1, 1, 0, 1},
                                     {1, 0, 0, 0, 1},
                                     {1, 1, 1, 1, 1} };
-
+	
+	cout << endl << "Laberinto:\n";
+	
+	for (int x = 0; x < N; ++x) {
+        cout << "\t";
+         for (int y = 0; y < N; ++y) {
+             cout << laberinto[x][y] << " ";
+         }
+         cout << "\n";
+     }
+	
     vector<vector<bool>> visitado;
     visitado.resize(N, vector<bool>(N));
 
@@ -70,10 +80,11 @@ int main()
     SolBackTracking(laberinto, visitado, solucion, 0, 0, min_dist, 0);
 
     if (min_dist != INT_MAX){
-        cout << endl << "Solucion encontrada con longitud " << min_dist << "\n";
+        cout << "\nSolucion encontrada con longitud " << min_dist << "\n";
         for (int x = 0; x < N; ++x) {
+            cout << "\t";
             for (int y = 0; y < N; ++y) {
-                cout << solucion[x][y] << " ";
+                cout  << solucion[x][y] << " ";
             }
             cout << "\n";
         }
