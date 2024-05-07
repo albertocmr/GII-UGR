@@ -70,30 +70,30 @@ bool esValido(const ubicacion &ubi, const int &movimiento,
     ubicacion siguiente = ubi;
     if (valido)
         switch (movimiento) {
-        case 1:
-        siguiente.col -= 2;
-        valido = dentroRango(siguiente) &&
-                tablero[ubi.fil][ubi.col - 1] == estado::ocupada &&
-                tablero[siguiente.fil][siguiente.col] == estado::libre;
-        break;
-        case 2:
-        siguiente.fil -= 2;
-        valido = dentroRango(siguiente) &&
-                tablero[ubi.fil - 1][ubi.col] == estado::ocupada &&
-                tablero[siguiente.fil][siguiente.col] == estado::libre;
-        break;
-        case 3:
-        siguiente.col += 2;
-        valido = dentroRango(siguiente) &&
-                tablero[ubi.fil][ubi.col + 1] == estado::ocupada &&
-                tablero[siguiente.fil][siguiente.col] == estado::libre;
-        break;
-        case 4:
-        siguiente.fil += 2;
-        valido = dentroRango(siguiente) &&
-                tablero[ubi.fil + 1][ubi.col] == estado::ocupada &&
-                tablero[siguiente.fil][siguiente.col] == estado::libre;
-        break;
+          case 1:
+            siguiente.col -= 2;
+            valido = dentroRango(siguiente) &&
+            tablero[ubi.fil][ubi.col - 1] == estado::ocupada &&
+            tablero[siguiente.fil][siguiente.col] == estado::libre;
+            break;
+          case 2:
+            siguiente.fil -= 2;
+            valido = dentroRango(siguiente) &&
+                    tablero[ubi.fil - 1][ubi.col] == estado::ocupada &&
+                    tablero[siguiente.fil][siguiente.col] == estado::libre;
+            break;
+          case 3:
+            siguiente.col += 2;
+            valido = dentroRango(siguiente) &&
+                    tablero[ubi.fil][ubi.col + 1] == estado::ocupada &&
+                    tablero[siguiente.fil][siguiente.col] == estado::libre;
+            break;
+          case 4:
+            siguiente.fil += 2;
+            valido = dentroRango(siguiente) &&
+                    tablero[ubi.fil + 1][ubi.col] == estado::ocupada &&
+                    tablero[siguiente.fil][siguiente.col] == estado::libre;
+            break;
         }
 
     return valido;

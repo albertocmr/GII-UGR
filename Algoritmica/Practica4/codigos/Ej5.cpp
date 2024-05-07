@@ -30,7 +30,6 @@ void SolBackTracking(vector<vector<int>> &laberinto, vector<vector<bool>> &visit
         }
     }
 
-    visitado[x][y] = true;
 
     // Nos movemos en las 4 direcciones posibles
     if (CasillaValida(laberinto, visitado, x + 1, y)) {
