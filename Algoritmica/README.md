@@ -56,6 +56,8 @@ Códigos Algoritmos Greedy:
 
 Los enunciados de estos problemas se encuentran en el guión de la práctica. 
 
+Calificación obtenida --> /10.
+
 ### Práctica4. Exploración de grafos.
 
 El objetivo de la práctica consiste en que el alumno sea capaz de analizar una serie de problemas y
@@ -71,7 +73,9 @@ Códigos Exploración de grafos:
 
 4. Laberinto (backtracking): [Ej4.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica4/codigos/Ej4.cpp)
 
-5. Laberinto (camino mas corto): [Ej5.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica4/codigos/Ej5.cpp)
+5. Laberinto, sin poda (camino mas corto): [Ej5.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica4/codigos/Ej5.cpp)
+
+Los enunciados de estos problemas se encuentran en el guión de la práctica. 
 
 Calificación obtenida --> /10.
 
