@@ -56,7 +56,7 @@ Códigos Algoritmos Greedy:
 
 Los enunciados de estos problemas se encuentran en el guión de la práctica. 
 
-Calificación obtenida --> /10.
+Calificación obtenida --> 8.5/10.
 
 ### Práctica4. Exploración de grafos.
 
@@ -83,6 +83,13 @@ Calificación obtenida --> /10.
 
 
 Códigos Programación Dinámica:
+1. Alquiler de canoas: [Ej1.cpp]
+
+2. Planificación de viajes entre ciudades: [Ej2.cpp]
+
+3. Videojuego en el que el jugador puede conseguir un máximo de 3 bolsas de oro con los movimientos permitidos [Ej3.cpp]
+
+4. Pixel Mountain: [Ej4.cpp]
 
 Calificación obtenida --> /10.
 
