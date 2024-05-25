@@ -37,7 +37,9 @@ void funcionRecuperacion(stack<int> &ruta, int matriz[20][20], int inicial, int 
         nodo_optimo = -1;
         int coste_aproximado = coste;
         for(int i=nodo_actual+1; i<20; i++){
-            //cout << "matriz[ " << nodo_actual << "][ " << i << "]: " << matriz[nodo_actual][i] << " != inf(" << inf << ")\t &&\t " << "coste aproximado(" << coste_aproximado << ") + matriz[ " << nodo_actual << "][ " << i << "]: (" << matriz[nodo_actual][i] << ") == [" << coste_aproximado+matriz[nodo_actual][i] << "   <   " << coste_optimo << "]" << endl;
+            // cout << "matriz[ " << nodo_actual << "][ " << i << "]: " << matriz[nodo_actual][i] << " != inf(" << inf << ")\t &&\t " << 
+            //         "coste aproximado(" << coste_aproximado << ") + matriz[ " << nodo_actual << "][ " << i << "]: (" << matriz[nodo_actual][i] << 
+            //         ") == [" << coste_aproximado+matriz[nodo_actual][i] << "   <   " << coste_optimo << "]" << endl;
             if(nodo_optimo == -1)
                 nodo_optimo = i;
             
@@ -70,8 +72,7 @@ set<int> AlgoritmoPDin(int matriz[20][20], int copia[20][20], int inicial, int f
             for(int j=0; j<num_nodos; j++){
                 int dt = copia[i][k] + copia[k][j];
                 if (dt < copia[i][j])
-                    copia[i][j] = dt;
-                
+                    copia[i][j] = dt;   
             }
         
     
@@ -112,29 +113,29 @@ int main(){
     };*/
 
     int matriz[20][20] = {
-/*0*/   {0,     8,     inf,  inf,    inf,   8,      8,      inf,    inf,   inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf},
-/*1*/   {inf,   0,     100,   inf,    inf,   inf,    8,      -1,     inf,   inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf},
-/*2*/   {inf,   inf,   0,    8,      inf,   inf,    inf,    -1,     -1,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf},
-/*3*/   {inf,   inf,   inf,  0,      -1,    inf,    inf,    inf,    -1,    8,      inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf},
-/*4*/   {inf,   inf,   inf,  inf,    0,     inf,    inf,    inf,    inf,   8,      inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf},
+/*0*/   {0,     8,    inf,  inf,    inf,   8,      8,      inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    inf,     inf,    inf,    inf},
+/*1*/   {inf,   0,    100,   inf,    inf,   inf,   8,      -1,     inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    inf,     inf,    inf,    inf},
+/*2*/   {inf,   inf,  0,    8,      inf,   inf,    inf,    -1,     -1,    inf,    inf,     inf,    inf,    inf,    inf,    inf,    inf,     inf,    inf,    inf},
+/*3*/   {inf,   inf,  inf,  0,      -1,    inf,    inf,    inf,    -1,    8,      inf,     inf,    inf,    inf,    inf,    inf,    inf,     inf,    inf,    inf},
+/*4*/   {inf,   inf,  inf,  inf,    0,     inf,    inf,    inf,    inf,   8,      inf,     inf,    inf,    inf,    inf,    inf,    inf,     inf,    inf,    inf},
 
-/*8*/   {inf,   inf,   inf,  inf,    inf,   0,      8,      inf,    inf,   inf,    8,      8,      inf,    inf,    inf,    inf,    inf,    inf,    inf,    inf},
-/*6*/   {inf,   inf,   inf,  inf,    inf,   inf,    0,      -1,     inf,   inf,    inf,    8,      -1,     inf,    inf,    inf,    inf,    inf,    inf,    inf},
-/*7*/   {inf,   inf,   inf,  inf,    inf,   inf,    inf,    0,      -1,    inf,    inf,    inf,    -1,     8,      inf,    inf,    inf,    inf,    inf,    inf},
-/*8*/   {inf,   inf,   inf,  inf,    inf,   inf,    inf,    inf,    0,     8,      inf,    inf,    inf,    8,      8,      inf,    inf,    inf,    inf,    inf},
-/*9*/   {inf,   inf,   inf,  inf,    inf,   inf,    inf,    inf,    inf,   0,      inf,    inf,    inf,    inf,    8,      inf,    inf,    inf,    inf,    inf},
+/*5*/   {inf,   inf,  inf,  inf,    inf,   0,      8,      inf,    inf,   inf,    8,       8,      inf,    inf,    inf,    inf,    inf,     inf,    inf,    inf},
+/*6*/   {inf,   inf,  inf,  inf,    inf,   inf,    0,      -1,     inf,   inf,    inf,     8,      -1,     inf,    inf,    inf,    inf,     inf,    inf,    inf},
+/*7*/   {inf,   inf,  inf,  inf,    inf,   inf,    inf,    0,      -1,    inf,    inf,     inf,    -1,     8,      inf,    inf,    inf,     inf,    inf,    inf},
+/*8*/   {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    0,     8,      inf,     inf,    inf,    8,      8,      inf,    inf,     inf,    inf,    inf},
+/*9*/   {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   0,      inf,     inf,    inf,    inf,    8,      inf,    inf,     inf,    inf,    inf},
 
-/*10*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    0,       8,      inf,    inf,    inf,    8,      8,      inf,     inf,    inf},
-/*11*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    inf,     0,      -1,     inf,    inf,    inf,    8,      -1,       inf,   inf},
-/*12*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    inf,     inf,    0,      8,      inf,    inf,    inf,    -1,       8,     inf},
-/*13*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    inf,     inf,    inf,    0,      8,      inf,    inf,    inf,     8,      0 },
-/*14*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    0,      inf,    inf,    inf,     inf,    0 },
+/*10*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    0,       8,      inf,    inf,    inf,    8,      8,      inf,     inf,    inf},
+/*11*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    inf,     0,      -1,     inf,    inf,    inf,    8,      -1,      inf,    inf},
+/*12*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    inf,     inf,    0,      8,      inf,    inf,    inf,    -1,      8,      inf},
+/*13*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    inf,     inf,    inf,    0,      8,      inf,    inf,    inf,     8,      0  },
+/*14*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    0,      inf,    inf,    inf,     inf,    0  },
       
-/*18*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    0,      8,      inf,     inf,    inf},
-/*16*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    0,      -1,       inf,    inf},
-/*17*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    inf,    0,       8,      inf},
-/*18*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    inf,    inf,     0,      0 },
-/*19*/   {inf,   inf,  inf,  inf,    inf,   inf,   inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    inf,    inf,     inf,    0 },
+/*15*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    0,      8,      inf,     inf,    inf},
+/*16*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    0,      -1,      inf,    inf},
+/*17*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    inf,    0,       8,      inf},
+/*18*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    inf,    inf,     0,      0  },
+/*19*/  {inf,   inf,  inf,  inf,    inf,   inf,    inf,    inf,    inf,   inf,    inf,     inf,    inf,    inf,    inf,    inf,    inf,    inf,     inf,    0  },
     };
 
 
