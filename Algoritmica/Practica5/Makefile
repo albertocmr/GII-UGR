@@ -53,7 +53,7 @@ ejecutables:
 ej1:
 	@echo
 	@echo Ejecucion del algoritmo Ej1
-	$(CODIGOS)/Ej1.bin
+	$(CODIGOS)/Ej1.bin 1 5
 	@echo
 	@echo
 	@echo ------------------------------------------------------------

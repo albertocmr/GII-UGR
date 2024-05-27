@@ -37,9 +37,6 @@ void funcionRecuperacion(stack<int> &ruta, int matriz[20][20], int inicial, int 
         nodo_optimo = -1;
         int coste_aproximado = coste;
         for(int i=nodo_actual+1; i<20; i++){
-            // cout << "matriz[ " << nodo_actual << "][ " << i << "]: " << matriz[nodo_actual][i] << " != inf(" << inf << ")\t &&\t " << 
-            //         "coste aproximado(" << coste_aproximado << ") + matriz[ " << nodo_actual << "][ " << i << "]: (" << matriz[nodo_actual][i] << 
-            //         ") == [" << coste_aproximado+matriz[nodo_actual][i] << "   <   " << coste_optimo << "]" << endl;
             if(nodo_optimo == -1)
                 nodo_optimo = i;
             
@@ -47,11 +44,8 @@ void funcionRecuperacion(stack<int> &ruta, int matriz[20][20], int inicial, int 
                 nodo_optimo = i;
                 coste_aproximado += matriz[nodo_actual][i];
             } 
-            
-
         }
         
-
         if(nodo_optimo != -1){
             ruta.push(nodo_optimo);
             coste += matriz[nodo_actual][nodo_optimo];
@@ -63,10 +57,12 @@ void funcionRecuperacion(stack<int> &ruta, int matriz[20][20], int inicial, int 
         }
     }
 }
+
+
 set<int> AlgoritmoPDin(int matriz[20][20], int copia[20][20], int inicial, int final){
     int num_nodos = 20;
 
-    // Algortimo de Floyd Warshall
+    // Algortimo de Floyd-Warshall (costes mínimos entre todos los nodos)
     for(int k=0; k<num_nodos; k++)
         for(int i=0; i<num_nodos; i++)
             for(int j=0; j<num_nodos; j++){
@@ -74,10 +70,8 @@ set<int> AlgoritmoPDin(int matriz[20][20], int copia[20][20], int inicial, int f
                 if (dt < copia[i][j])
                     copia[i][j] = dt;   
             }
-        
-    
 
-    mostrarVector(copia);
+    //mostrarVector(copia);
     stack<int> ruta;
     int coste_optimo = copia[inicial][final];
     funcionRecuperacion(ruta, matriz, inicial, final, coste_optimo);
@@ -90,7 +84,6 @@ set<int> AlgoritmoPDin(int matriz[20][20], int copia[20][20], int inicial, int f
     return camino;
 
 }
-
 
 
 int main(){
