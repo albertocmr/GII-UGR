@@ -77,21 +77,21 @@ Códigos Exploración de grafos:
 
 Los enunciados de estos problemas se encuentran en el guión de la práctica. 
 
-Calificación obtenida --> /10.
+Calificación obtenida --> 8.0/10.
 
 ### Práctica5. Programación dinámica.
 
 
 Códigos Programación Dinámica:
-1. Alquiler de canoas: [Ej1.cpp]
+1. Alquiler de canoas: [Ej1.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica5/codigos/Ej1.cpp)
 
-2. Planificación de viajes entre ciudades: [Ej2.cpp]
+2. Planificación de viajes entre ciudades: [Ej2.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica5/codigos/Ej2.cpp)
 
-3. Videojuego en el que el jugador puede conseguir un máximo de 3 bolsas de oro con los movimientos permitidos [Ej3.cpp]
+3. Videojuego en el que el jugador puede conseguir un máximo de 3 bolsas de oro con los movimientos permitidos [Ej3.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica5/codigos/Ej3.cpp)
 
-4. Pixel Mountain: [Ej4.cpp]
+4. Pixel Mountain: [Ej4.cpp](https://github.com/albertocmr/GII-UGR/blob/main/Algoritmica/Practica5/codigos/Ej4.cpp)
 
-Calificación obtenida --> /10.
+Calificación obtenida --> 8.0/10.
 
 
 
